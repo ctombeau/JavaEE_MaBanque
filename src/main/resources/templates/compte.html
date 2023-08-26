@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table  style="width:100%">
+    <tr>
+        <th>Id Client</th>
+        <th>Nom Complet</th>
+        <th>Compte</th>
+        <th>Solde</th>
+        <th>Devise</th>
+    </tr>
+
+    <tr th:each="cmpt: ${comptes}" align="center">
+        <td th:text="${cmpt.idClient}"></td>
+        <td th:text="${cmpt.nomComplet}"></td>
+        <td th:text="${cmpt.numcompte}"></td>
+        <td th:text="${cmpt.solde}"></td>
+        <td th:text="${cmpt.devise}"></td>
+    </tr>
+
+</table>
+
+
+</body>
+</html>
